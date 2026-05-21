@@ -346,7 +346,7 @@ body.menu-open .menu-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: url("../logo_preto.png");
+  background-image: url("../img/logo_preto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: min(86vw, 1100px) auto;

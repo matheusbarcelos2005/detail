@@ -280,11 +280,11 @@ body.theme-light .site-header .btn-pill:hover {
    =========================================================== */
 .services {
   position: relative;
-  background: var(--ink);
-  color: var(--bone);
-  padding: 5rem 1rem 6rem;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 5rem 0.5rem 6rem;
 }
-@media (min-width: 768px) { .services { padding: 6rem 2.5rem 8rem; } }
+@media (min-width: 768px) { .services { padding: 6rem 1rem 8rem; } }
 
 .services-top {
   display: flex;
@@ -294,19 +294,17 @@ body.theme-light .site-header .btn-pill:hover {
 @media (min-width: 768px) { .services-top { margin-bottom: 4rem; } }
 
 .services-top .btn-pill {
-  background: var(--paper);
-  color: var(--ink);
-  border-color: var(--paper);
-}
-.services-top .btn-pill:hover {
   background: var(--ink);
   color: var(--paper);
-  border-color: var(--paper);
+  border-color: var(--ink);
+}
+.services-top .btn-pill:hover {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
 }
 
 .services-grid {
-  max-width: var(--max);
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
@@ -317,18 +315,22 @@ body.theme-light .site-header .btn-pill:hover {
 
 .service-card {
   position: relative;
-  background: var(--steel);
+  background: #fff;
   border-radius: 1.25rem;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 42%;
+  grid-template-rows: 1fr auto;
   isolation: isolate;
-  min-height: 460px;
-  border: 1px solid var(--line);
+  min-height: 220px;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
-@media (min-width: 900px) { .service-card { min-height: 540px; } }
+@media (min-width: 900px) { .service-card { min-height: 240px; } }
 
 .service-top {
+  grid-column: 1;
+  grid-row: 1;
   position: relative;
   z-index: 2;
   padding: 2rem 2rem 1.25rem;
@@ -341,11 +343,11 @@ body.theme-light .site-header .btn-pill:hover {
 .service-title {
   font-family: "Anton", "Bebas Neue", sans-serif;
   font-weight: 400;
-  font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-size: clamp(1.6rem, 3.4vw, 2.85rem);
   line-height: 0.9;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: var(--bone);
+  color: var(--ink);
 }
 
 .service-link {
@@ -356,55 +358,128 @@ body.theme-light .site-header .btn-pill:hover {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(239, 234, 227, 0.65);
+  color: rgba(11, 11, 11, 0.45);
   transition: color 0.3s;
 }
-.service-link:hover { color: var(--bone); }
+.service-link:hover { color: var(--ink); }
 .service-link span { transition: transform 0.3s var(--ease); display: inline-block; }
 .service-card:hover .service-link span { transform: translateX(5px); }
 
 .service-image {
+  grid-column: 2;
+  grid-row: 1 / -1;
   position: relative;
-  flex: 1;
-  margin: 0 1rem 1rem;
-  border-radius: 0.85rem;
   overflow: hidden;
   will-change: transform;
 }
-@media (min-width: 768px) { .service-image { margin: 0 1.25rem 1.25rem; } }
 
 .service-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.08);
-  transition: transform 1.5s var(--ease), filter 0.6s;
-  filter: grayscale(15%) brightness(0.95);
+  object-position: left center;
+  transform: scale(1.04);
+  transition: transform 1.5s var(--ease);
 }
 .service-card:hover .service-image img {
-  transform: scale(1.18);
-  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
 }
 
 .service-fab-group {
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  opacity: 0;
-  transition: opacity 0.5s var(--ease), bottom 0.5s var(--ease);
+  grid-column: 1;
+  grid-row: 2;
+  position: static;
+  z-index: 2;
+  padding: 0 2rem 1.75rem;
+  display: flex;
+  justify-content: flex-start;
+  opacity: 1;
+  transform: none;
 }
-.service-card:hover .service-fab-group { opacity: 1; bottom: 22px; }
 .service-fab-group .btn {
-  background: var(--paper);
+  background: transparent;
   color: var(--ink);
-  border-color: var(--paper);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--ink);
 }
 .service-fab-group .btn:hover {
   background: var(--ink);
   color: var(--paper);
+}
+
+/* ===========================================================
+   WHY CHOOSE US
+   =========================================================== */
+.why {
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.why-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .why-inner { grid-template-columns: 1fr 1fr; }
+}
+
+.why-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+@media (min-width: 900px) { .why-image { min-height: 560px; } }
+
+.why-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+.why-content {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) { .why-content { padding: 5rem 4rem; } }
+
+.why-title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.why-content p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(11, 11, 11, 0.75);
+}
+
+.why-content p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.why-btn {
+  margin-top: 0.75rem;
+  align-self: flex-start;
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.why-btn:hover {
+  background: transparent;
+  color: var(--ink);
 }
 
 /* ===========================================================

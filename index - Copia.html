@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>STREET Estetica Automotiva | Estetica Delivery, Polimento e Vitrificacao</title>
+    <meta
+      name="description"
+      content="Estetica automotiva premium com atendimento delivery, polimento tecnico, vitrificacao e acabamento de alto padrao."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Big+Shoulders+Stencil+Display:wght@600;700;800;900&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header reveal-fadeInDown" id="header">
+      <div class="header-inner container-fluid d-grid align-items-center">
+        <button class="header-logo-mark menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M7 10h18M7 16h18M7 22h13" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <a href="#hero" class="brand brand-logo" aria-label="Inicio da STREET Estetica Automotiva">
+          <img src="./logo_preto.png" alt="STREET Estetica Automotiva" width="1668" height="953" decoding="async" />
+        </a>
+
+        <a href="#book" class="btn btn-pill">Agendar</a>
+      </div>
+    </header>
+
+    <div class="menu-overlay" id="site-menu" aria-hidden="true">
+      <button class="menu-close" type="button" aria-label="Fechar menu">
+        <span aria-hidden="true"></span>
+      </button>
+
+      <a href="#hero" class="menu-logo" aria-label="Inicio da STREET Estetica Automotiva">
+        <img src="./logo_preto.png" alt="STREET Estetica Automotiva" width="1668" height="953" decoding="async" />
+      </a>
+
+      <nav class="menu-nav" aria-label="Menu principal">
+        <a href="#hero">Inicio</a>
+        <a href="#about">Sobre Nos</a>
+        <a href="#services">Estetica Delivery</a>
+        <a href="#services">Vitrificacao</a>
+        <a href="#services">Polimento Tecnico</a>
+        <a href="#reviews">Avaliacoes</a>
+        <a href="#book">Contato</a>
+      </nav>
+
+      <a href="#book" class="btn btn-pill menu-book">Agendar</a>
+    </div>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-inner container d-flex flex-column align-items-center">
+          <div class="hero-stage">
+            <span class="hero-bigword reveal-fadeInDown" aria-hidden="true">street</span>
+
+            <div class="hero-car reveal-slideInUp" data-parallax-y="-40">
+              <img
+                src="./img1.jpeg"
+                alt="Honda Civic branco visto de cima"
+                width="325"
+                height="767"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <p class="hero-tagline reveal-fadeInUp">
+            <span class="hero-tag-mark">#1</span> Estetica Automotiva Delivery Premium
+          </p>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="services-top reveal-fadeInUp d-flex justify-content-center">
+          <a href="#book" class="btn btn-pill btn-pill-lg">Agendar</a>
+        </div>
+
+        <div class="services-grid row g-4 justify-content-center">
+          <article class="service-card reveal-fadeInUp col-12 col-md-6 col-xl-4">
+            <div class="service-top">
+              <h3 class="service-title">VITRIFI-<br />CACAO</h3>
+              <p class="service-copy">Brilho profundo, protecao hidrofobica e defesa duradoura para uma pintura sempre marcante.</p>
+              <a href="#book" class="service-link">
+                Saiba Mais <span aria-hidden="true">-></span>
+              </a>
+            </div>
+            <div class="service-image" data-parallax-x="-40">
+              <img src="./ima1_ceramic.png" alt="Pintura preta brilhante preparada para vitrificacao" loading="lazy" decoding="async" />
+            </div>
+            <div class="service-fab-group">
+              <a href="#book" class="btn btn-pill">Agendar</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal-fadeInUp col-12 col-md-6 col-xl-4">
+            <div class="service-top">
+              <h3 class="service-title">POLIMENTO<br />TECNICO</h3>
+              <p class="service-copy">Remocao de marcas, restauracao de brilho e acabamento refinado antes da protecao.</p>
+              <a href="#book" class="service-link">
+                Saiba Mais <span aria-hidden="true">-></span>
+              </a>
+            </div>
+            <div class="service-image" data-parallax-y="-50">
+              <img src="./img2_paint.png" alt="Porta de veiculo preto com reflexo apos polimento tecnico" loading="lazy" decoding="async" />
+            </div>
+            <div class="service-fab-group">
+              <a href="#book" class="btn btn-pill">Agendar</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal-fadeInUp col-12 col-md-6 col-xl-4">
+            <div class="service-top">
+              <h3 class="service-title">ESTETICA<br />DELIVERY</h3>
+              <p class="service-copy">Cuidado interno e externo no local, com o mesmo padrao de um studio especializado.</p>
+              <a href="#book" class="service-link">
+                Saiba Mais <span aria-hidden="true">-></span>
+              </a>
+            </div>
+            <div class="service-image" data-parallax-x="40">
+              <img src="./im3_mobile.png" alt="RAM TRX cinza para servico de estetica delivery" loading="lazy" decoding="async" />
+            </div>
+            <div class="service-fab-group">
+              <a href="#book" class="btn btn-pill">Agendar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="why" id="about">
+        <div class="why-inner row g-0 align-items-center">
+          <div class="why-image reveal-fadeInLeft col-12 col-lg-6">
+            <img src="./img2.jpeg" alt="Honda Civic branco de perfil em studio escuro" loading="lazy" decoding="async" />
+          </div>
+          <div class="why-content reveal-fadeInRight col-12 col-lg-6">
+            <span class="section-kicker">Precisao acima de atalhos</span>
+            <h2 class="why-title">Feito para quem se importa com o acabamento.</h2>
+            <p>A STREET nasceu com um padrao simples: todo veiculo deve sair com a superficie mais limpa, reflexos mais definidos e um resultado que pareca intencional em cada detalhe.</p>
+            <p>De carros de uso diario a projetos de entusiastas, nosso processo e cuidadoso onde precisa ser e eficiente onde deve ser. A pintura e avaliada, o interior e tratado com criterio e cada superficie recebe o produto correto.</p>
+            <p>Escolha vitrificacao, polimento tecnico ou estetica delivery quando quiser resultado profissional sem precisar deslocar o veiculo.</p>
+            <a href="#book" class="btn btn-pill why-btn">Agendar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="reviews">
+        <div class="container">
+          <h2 class="t-section-title reveal-fadeInUp">O Que Os Clientes Percebem</h2>
+
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <figure class="swiper-slide testimonial">
+                <header class="testimonial-head">
+                  <span class="t-avatar">A</span>
+                  <div>
+                    <div class="t-name">Alex Morgan</div>
+                    <div class="t-meta">ha 2 meses</div>
+                  </div>
+                </header>
+                <blockquote>O carro voltou com profundidade real na pintura. A comunicacao foi clara, o horario foi cumprido e o acabamento ficou melhor do que eu esperava.</blockquote>
+              </figure>
+
+              <figure class="swiper-slide testimonial">
+                <header class="testimonial-head">
+                  <span class="t-avatar">M</span>
+                  <div>
+                    <div class="t-name">Maya Collins</div>
+                    <div class="t-meta">ha 3 meses</div>
+                  </div>
+                </header>
+                <blockquote>Fizeram todo o atendimento na minha garagem. Interior, rodas e vidros ficaram impecaveis, sem aquele aspecto engordurado de servico apressado.</blockquote>
+              </figure>
+
+              <figure class="swiper-slide testimonial">
+                <header class="testimonial-head">
+                  <span class="t-avatar">D</span>
+                  <div>
+                    <div class="t-name">Daniel Price</div>
+                    <div class="t-meta">ha 4 meses</div>
+                  </div>
+                </header>
+                <blockquote>O polimento fez muita diferenca sob luz direta. As marcas sumiram e o brilho ficou limpo, controlado e sem exagero.</blockquote>
+              </figure>
+
+              <figure class="swiper-slide testimonial">
+                <header class="testimonial-head">
+                  <span class="t-avatar">R</span>
+                  <div>
+                    <div class="t-name">Rafael Stone</div>
+                    <div class="t-meta">ha 5 meses</div>
+                  </div>
+                </header>
+                <blockquote>Fiz a vitrificacao depois do polimento e a repelencia da agua ficou excelente. Agora o carro esta muito mais facil de lavar.</blockquote>
+              </figure>
+
+              <figure class="swiper-slide testimonial">
+                <header class="testimonial-head">
+                  <span class="t-avatar">S</span>
+                  <div>
+                    <div class="t-name">Sofia Lane</div>
+                    <div class="t-meta">ha 6 meses</div>
+                  </div>
+                </header>
+                <blockquote>Cuidadosos, organizados e profissionais. E o tipo de trabalho em que da para perceber que cada painel foi revisado antes de finalizar.</blockquote>
+              </figure>
+            </div>
+          </div>
+
+          <div class="testimonials-nav">
+            <button class="t-arrow tsm-prev" aria-label="Depoimento anterior">&lsaquo;</button>
+            <button class="t-arrow tsm-next" aria-label="Proximo depoimento">&rsaquo;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="faq-grid container row g-5 align-items-center mx-auto">
+          <div class="faq-left col-12 col-lg-5">
+            <h2 class="faq-title reveal-fadeInLeft">FAQ</h2>
+
+            <div class="faq-list">
+              <div class="faq-item is-open">
+                <button class="faq-q" aria-expanded="true">
+                  <span>Voces atendem no meu local?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a">
+                  <p>Sim. Levamos equipamentos, produtos e processo para sua casa, trabalho ou local combinado, desde que exista um espaco seguro ao redor do veiculo.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                  <span>Quanto tempo leva um servico?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a">
+                  <p>Uma estetica de manutencao pode levar algumas horas. Polimento tecnico e vitrificacao podem ocupar boa parte do dia ou mais, dependendo do tamanho e estado da pintura.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                  <span>O que devo agendar primeiro?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a">
+                  <p>Se a pintura tem marcas, riscos leves ou aspecto opaco, comece pelo polimento antes da protecao. Se o veiculo precisa de uma limpeza completa, a estetica delivery e o primeiro passo ideal.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                  <span>Voces passam orcamento antes?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a">
+                  <p>Sim. Envie o modelo do veiculo, o objetivo do servico e algumas fotos, se possivel. Confirmamos o melhor pacote e o tempo estimado antes do agendamento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-right reveal-fadeInRight col-12 col-lg-7">
+            <img
+              src="./img3.jpeg"
+              alt="RAM TRX cinza de perfil em studio escuro"
+              data-parallax-x="20"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="book">
+        <div class="container footer-grid reveal-fadeInUp row align-items-center g-5 mx-auto">
+          <a href="#hero" class="footer-logo col-12 col-lg-5" aria-label="Inicio da STREET Estetica Automotiva">
+            <img src="./logo_preto.png" alt="STREET Estetica Automotiva" width="1668" height="953" loading="lazy" decoding="async" />
+          </a>
+
+          <div class="footer-columns row g-4 col-12 col-lg-7">
+            <nav class="footer-col col-12 col-md-4" aria-label="Links rapidos">
+              <h2>Links Rapidos</h2>
+              <a href="#hero">Inicio</a>
+              <a href="#about">Sobre Nos</a>
+              <a href="#services">Estetica Delivery</a>
+              <a href="#services">Vitrificacao</a>
+              <a href="#services">Polimento Tecnico</a>
+              <a href="#reviews">Avaliacoes</a>
+              <a href="#book">Contato</a>
+            </nav>
+
+            <div class="footer-col col-12 col-md-4">
+              <h2>Contato</h2>
+              <a href="mailto:hello@street-detailing.example">hello@street-detailing.example</a>
+              <a href="tel:+5561999999999">(61) 99999-9999</a>
+              <span>Atendimento por agendamento</span>
+            </div>
+
+            <div class="footer-col col-12 col-md-4">
+              <h2>Horario De Funcionamento</h2>
+              <span>Segunda a Sexta: 8h as 19h</span>
+              <span>Sabado: 8h as 14h</span>
+              <span>Domingo: fechado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container footer-bottom-inner">
+            <span>&copy; <span id="year"></span> STREET ESTETICA AUTOMOTIVA</span>
+            <span class="brand-text small">STREET</span>
+            <span>DETALHAR / PROTEGER / MANTER</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>

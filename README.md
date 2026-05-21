@@ -1,83 +1,55 @@
-# AURIX Detailing
+# STREET Estetica Automotiva
 
-Site estático em HTML + CSS + JavaScript puro, inspirado no saiibuauto.com.
+Landing page estatica em HTML, Bootstrap, CSS customizado e JavaScript puro para um servico premium de estetica automotiva.
+
+O visual foi criado usando o site Saiibu Auto apenas como referencia de direcao: hero com carro em destaque, cards de servicos, bloco institucional, depoimentos, FAQ e formulario. O conteudo, marca, textos e imagens usados aqui sao proprios do projeto.
 
 ## Estrutura
 
-```
+```text
 detail/
-├── index.html         Página única com todas as seções
-├── css/style.css      Tema, layout e animações (fadeIn / slideIn / hover)
-├── js/main.js         Lenis (smooth scroll), GSAP ScrollTrigger (parallax),
-│                      Swiper (carrossel), FAQ accordion, header on-scroll
-├── .nojekyll          Sinaliza ao GitHub Pages para não processar com Jekyll
-└── README.md
+|-- index.html
+|-- css/style.css
+|-- js/main.js
+|-- img1.jpeg
+|-- img2.jpeg
+|-- img3.jpeg
+|-- logo.jpeg
+|-- ima1_ceramic.png
+|-- img2_paint.png
 ```
 
-Libs externas são carregadas via CDN (jsDelivr): Lenis, GSAP, ScrollTrigger, Swiper.
-Fontes via Google Fonts: **Manrope** (corpo) e **Orbitron** (display).
+## Recursos
+
+- Smooth scroll com Lenis
+- Parallax com GSAP + ScrollTrigger
+- Carrossel de depoimentos com Swiper
+- Grid e utilitarios responsivos com Bootstrap 5.3.8
+- FAQ accordion acessivel com `aria-expanded`
+- Imagens locais do projeto
+- Formulario demonstrativo pronto para conectar a um servico real
 
 ## Rodar localmente
 
-Como o site usa fetch de fontes/scripts via HTTPS, abrir o `index.html` direto pelo
-explorer funciona, mas alguns navegadores limitam módulos via `file://`. O ideal
-é servir com qualquer servidor estático:
+Abra o `index.html` no navegador ou sirva a pasta com um servidor estatico:
 
 ```powershell
-# Opção 1 (qualquer máquina com Node)
-npx http-server . -p 5500
-
-# Opção 2 (Python instalado)
 python -m http.server 5500
 ```
 
-Depois abra `http://localhost:5500`.
+Depois acesse:
 
-## Publicar no GitHub Pages
+```text
+http://localhost:5500
+```
 
-1. Crie um repositório no GitHub (ex.: `aurix-detail`, **Public**).
-2. Dentro desta pasta, suba o código:
+## Publicacao
 
-   ```powershell
-   git add .
-   git commit -m "feat: site AURIX inicial"
-   git branch -M main
-   git remote add origin https://github.com/SEU-USUARIO/aurix-detail.git
-   git push -u origin main
-   ```
+Por ser um site estatico, pode ser publicado em GitHub Pages, Netlify, Vercel, Cloudflare Pages ou qualquer hospedagem que sirva HTML/CSS/JS.
 
-3. No GitHub, vá em **Settings → Pages**:
-   - **Source:** `Deploy from a branch`
-   - **Branch:** `main` / `/ (root)`
-   - Salve.
+## Pontos para producao
 
-4. Aguarde ~1 min. Sua URL fica em:
-   `https://SEU-USUARIO.github.io/aurix-detail/`
-
-Por ser HTML puro, **não precisa de build nem GitHub Actions**.
-
-## Editar conteúdo
-
-- **Textos / preços / serviços:** todo o conteúdo está no `index.html`. Não tem
-  framework — é só Ctrl+F e editar.
-- **Imagens:** atualmente uso placeholders do `picsum.photos`. Para usar imagens
-  reais, crie uma pasta `assets/` e troque os `src` dos `<img>`.
-- **Cores / fontes:** todas as cores estão como CSS variables no topo do
-  `css/style.css` (`--ink`, `--bone`, `--accent`, etc.). Mude lá e o site inteiro
-  reflete.
-- **Animações:**
-  - Velocidade dos parallax: atributos `data-parallax-y="-120"` ou
-    `data-parallax-x="60"` nos elementos (números em px).
-  - Tempo da entrada (`fadeInUp`, etc.): no fim do `style.css`.
-  - Velocidade do carrossel: bloco `new Swiper(...)` no `main.js`.
-
-## Formulário do footer
-
-Hoje só faz `alert()` de demonstração. Para envios reais sem backend, plugue em:
-
-- [Formspree](https://formspree.io/) — gratuito até 50 envios/mês
-- [Web3Forms](https://web3forms.com/) — gratuito, ilimitado
-- [Getform](https://getform.io/)
-
-Basta trocar o atributo `action` do `<form>` pelo endpoint deles e remover o
-`onsubmit` que tem hoje.
+- Trocar `hello@street-detailing.example` por um email real.
+- Conectar o formulario a Formspree, Web3Forms, Getform ou backend proprio.
+- Converter imagens grandes para WebP/AVIF para melhorar carregamento.
+- Definir links reais para agenda, Instagram ou WhatsApp.

@@ -1,5 +1,5 @@
 /* ============================================
-   AURIX Detailing – interações
+   STREET Auto Detailing - interactions
    Libs (CDN no index.html):
      Lenis (smooth scroll)
      GSAP + ScrollTrigger (parallax)
@@ -9,9 +9,32 @@
 (() => {
   "use strict";
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- 0. MENU OVERLAY ---------- */
+  const menu = document.getElementById("site-menu");
+  const menuOpenBtn = document.querySelector(".menu-toggle");
+  const menuCloseBtn = document.querySelector(".menu-close");
+
+  const setMenuOpen = (open) => {
+    if (!menu || !menuOpenBtn) return;
+    document.body.classList.toggle("menu-open", open);
+    menu.setAttribute("aria-hidden", String(!open));
+    menuOpenBtn.setAttribute("aria-expanded", String(open));
+  };
+
+  menuOpenBtn?.addEventListener("click", () => setMenuOpen(true));
+  menuCloseBtn?.addEventListener("click", () => setMenuOpen(false));
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+
   /* ---------- 1. SMOOTH SCROLL (Lenis) ---------- */
   let lenis = null;
-  if (window.Lenis) {
+  if (window.Lenis && !reduceMotion) {
     lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -30,7 +53,7 @@
     }
   }
 
-  /* ---------- 2. ÂNCORAS SMOOTH ---------- */
+  /* ---------- 2. SMOOTH ANCHORS ---------- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       const id = a.getAttribute("href");
@@ -105,7 +128,7 @@
   });
 
   /* ---------- 5. PARALLAX (GSAP + ScrollTrigger) ---------- */
-  if (window.gsap && window.ScrollTrigger) {
+  if (window.gsap && window.ScrollTrigger && !reduceMotion) {
     gsap.registerPlugin(ScrollTrigger);
 
     document.querySelectorAll("[data-parallax-y]").forEach((el) => {
@@ -155,11 +178,13 @@
       spaceBetween: 16,
       loop: true,
       speed: 500,
-      autoplay: {
-        delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false,
-      },
+      autoplay: reduceMotion
+        ? false
+        : {
+            delay: 3000,
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+          },
       navigation: {
         nextEl: ".tsm-next",
         prevEl: ".tsm-prev",
@@ -192,7 +217,7 @@
     });
   });
 
-  /* ---------- 8. ANO DINÂMICO NO FOOTER ---------- */
+  /* ---------- 8. DYNAMIC FOOTER YEAR ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
